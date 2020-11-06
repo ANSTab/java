@@ -10,7 +10,7 @@ public class CollectionOperationImpl implements CollectionOperation {
         boolean pravda = false;
         for (int i = 0; i < collection.size() - 1; i++) {
             for (int j = i + 1; j < collection.size(); j++) {
-                if (collection.get(i).hashCode() == (collection.get(j).hashCode())) {
+                if (collection.get(i).equals(collection.get(j))) {
                     pravda = true;
                     collection.remove(j);
                     j--;
@@ -30,6 +30,7 @@ public class CollectionOperationImpl implements CollectionOperation {
     public void myMetColl(List<Task> collection) {
         CollectionOperation myColl = new CollectionOperationImpl();
         System.out.println(myColl.distincCollection(collection));
-        System.out.println(myColl.distincList(collection));
+        CollectionOperation myColl1 = new CollectionOperationImpl();
+        System.out.println(myColl1.distincList(collection));
     }
 }
