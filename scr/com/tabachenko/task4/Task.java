@@ -1,9 +1,13 @@
 package com.tabachenko.task4;
+
+import java.util.Collection;
+
 public class Task {
+
     @Override
     public String toString() {
         return "Task{" +
-                " name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", category='" + category + '\'' +
                 '}';
     }
