@@ -7,20 +7,21 @@ import java.util.Set;
 
 public interface TaskManager {
    //додати задачку на якийся час
-    public  void add(LocalDate date, Task task);
+    void add(LocalDate date, Task task);
     //видалити задачку по часу
     void remove(LocalDate date) throws NoSuchElementException;
 
     // отримати всі категорії по задачкам
-    void getCategories();
+    Set<String> getCategories(Map<LocalDate, Task> map);
 
     //For next 3 methods tasks should be sorted by date
     /*Map<String, List<Task>> getTasksByCategories(String... categories);
     //отримати список всих задач по категорії*/
-     void getTasksByCategory(String category);
+    List<Task> getTasksByCategory(String category);
 
     //тут понятно отримати всі таски на сьогодні
-    List<Task> getTasksForToday(Map<LocalDate,Task> categorForToday);
+    List<Task> getTasksForToday(LocalDate date);
+
     void printMap();
-    void sortMap();
+
 }
