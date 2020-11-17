@@ -14,12 +14,13 @@ public class Launcher {
         taskManager.add(LocalDate.parse("2016-11-12"), new Task("AlexWorkingBliy", "workingNow"));
         taskManager.add(LocalDate.parse("2017-12-11"), new Task("AlexWorkingBlsdfsfiy", "workingNow"));
 
-
-        taskManager.printMap();
-        taskManager.remove(LocalDate.parse("1989-10-17"));
-        System.out.println("========================");
-        System.out.println(taskManager.getTasksByCategory("workingNow"));
-        System.out.println(taskManager.getTasksForToday(LocalDate.parse("2020-12-11")));
+        String [] categoris = {"School","work","univercity","HYINIY","workingNow"};
+        //taskManager.printMap();
+        //taskManager.remove(LocalDate.parse("1987-10-17"));
+       // System.out.println("========================");
+       // System.out.println(taskManager.getTasksByCategory("workingNow"));
+        //System.out.println(taskManager.getTasksForToday(LocalDate.parse("2020-12-11")));
+        System.out.println(taskManager.getTasksByCategories(categoris));
 
 
     }

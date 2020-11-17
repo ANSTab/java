@@ -8,6 +8,7 @@ public class TaskMenegerImpl implements TaskManager {
 
     private Map<LocalDate, Task> map = new HashMap<>();
 
+
     @Override
     public void add(LocalDate date, Task task) {
         map.put(date, task);
@@ -16,13 +17,15 @@ public class TaskMenegerImpl implements TaskManager {
 
     @Override
     public void remove(LocalDate date) throws NoSuchElementException {
-       Set<LocalDate> localDates = map.keySet();
-
-        System.out.println(localDates);
-        Iterator<LocalDate> dateIterator = localDates.iterator();
-        while (dateIterator.hasNext()){
-            LocalDate element = localDates.iterator().next();
-            System.out.println(element);
+        for (Map.Entry<LocalDate, Task> entry : map.entrySet()) {
+            if (entry.getKey().equals(date)) {
+                map.remove(date);
+                System.out.println("знайдено дату");
+                System.out.println(map);
+                break;
+            } else {
+                System.out.println("Дати не знайдено");
+            }
         }
     }
 
@@ -35,6 +38,39 @@ public class TaskMenegerImpl implements TaskManager {
             stringSet.add(task);
         }
         return stringSet;
+    }
+
+    @Override
+    public Map<String, List<Task>> getTasksByCategories(String[] categories) {
+        Map<String, List<Task>> stringListMap = new HashMap<>();
+        Collection<Task> taskListValues = map.values();
+        for (int i = 0; i < categories.length; i++) {
+            for (Map.Entry<LocalDate, Task> entry : map.entrySet()) {
+                String taskCatKey = entry.getValue().getCategory();
+                if (categories[i].equals(taskCatKey)) {
+                    for (Task q : taskListValues) {
+                        if (q.getCategory().equals(taskCatKey)) {
+                            List<Task> taskList = new ArrayList<>();
+                            List<Task> listManyTask = new ArrayList<>();
+                            Iterator<Task> taskIterator = taskList.iterator();
+                            for (Task a:taskListValues){
+                                if (a.getCategory().equals(taskIterator.next())){
+
+                                }
+                            }
+
+                                taskList.add(q);
+                            listManyTask.add(q);
+
+                            stringListMap.put(taskCatKey, taskList);
+                            System.out.println(taskList);
+
+                        }
+                    }
+                }
+            }
+        }
+        return stringListMap;
     }
 
     @Override
@@ -69,6 +105,7 @@ public class TaskMenegerImpl implements TaskManager {
         System.out.println("____________________________");
         Map<LocalDate, Task> mapTree = new TreeMap<>(map);
         System.out.println(mapTree);
+
 
     }
 
