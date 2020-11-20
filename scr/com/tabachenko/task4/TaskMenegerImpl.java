@@ -43,30 +43,13 @@ public class TaskMenegerImpl implements TaskManager {
     @Override
     public Map<String, List<Task>> getTasksByCategories(String[] categories) {
         Map<String, List<Task>> stringListMap = new HashMap<>();
-        Collection<Task> taskListValues = map.values();
         for (int i = 0; i < categories.length; i++) {
+            List<Task> taskList = new ArrayList<>();
             for (Map.Entry<LocalDate, Task> entry : map.entrySet()) {
-                String taskCatKey = entry.getValue().getCategory();
-                if (categories[i].equals(taskCatKey)) {
-                    for (Task q : taskListValues) {
-                        if (q.getCategory().equals(taskCatKey)) {
-                            List<Task> taskList = new ArrayList<>();
-                            List<Task> listManyTask = new ArrayList<>();
-                            Iterator<Task> taskIterator = taskList.iterator();
-                            for (Task a:taskListValues){
-                                if (a.getCategory().equals(taskIterator.next())){
-
-                                }
-                            }
-
-                                taskList.add(q);
-                            listManyTask.add(q);
-
-                            stringListMap.put(taskCatKey, taskList);
-                            System.out.println(taskList);
-
-                        }
-                    }
+                if (categories[i].equals(entry.getValue().getCategory())) {
+                    taskList.add(entry.getValue());
+                    stringListMap.put(categories[i], taskList);
+                    System.out.println(taskList);
                 }
             }
         }
