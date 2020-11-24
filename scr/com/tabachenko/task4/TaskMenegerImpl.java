@@ -49,7 +49,7 @@ public class TaskMenegerImpl implements TaskManager {
                 if (categories[i].equals(entry.getValue().getCategory())) {
                     taskList.add(entry.getValue());
                     stringListMap.put(categories[i], taskList);
-                    System.out.println(taskList);
+                    //System.out.println(taskList);
                 }
             }
         }
