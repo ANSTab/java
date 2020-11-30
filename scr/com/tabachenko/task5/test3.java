@@ -13,10 +13,14 @@ public class test3 {
     public static void main(String[] args) throws IOException {
 
 
-        List<String> srcFiles = Arrays.asList("D:\\TestDir\\text\\test\\qw.txt", "D:\\TestDir\\text\\test\\s.txt");
+       // List<String> srcFiles = Arrays.asList("D:\\TestDir\\text\\test\\qw.txt", "D:\\TestDir\\text\\test\\s.txt");
+        List<String> srcFiles = new ArrayList<>();
+        srcFiles.add("D:\\TestDir\\text\\test\\qw.txt");
+        srcFiles.add("D:\\TestDir\\text\\test\\s.txt");
 
         FileOutputStream fos = new FileOutputStream("D:\\TestDir\\text\\multiCompressed111.zip");
         ZipOutputStream zipOut = new ZipOutputStream(fos);
+        System.out.println(srcFiles);
         for (String srcFile : srcFiles) {
             File fileToZip = new File(srcFile);
             FileInputStream fis = new FileInputStream(fileToZip);
