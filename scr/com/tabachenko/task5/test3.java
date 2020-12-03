@@ -1,6 +1,7 @@
 package com.tabachenko.task5;
 
 import java.io.*;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,16 +18,14 @@ public class test3 {
         List<String> srcFiles = new ArrayList<>();
         srcFiles.add("D:\\TestDir\\text\\test\\qw.txt");
         srcFiles.add("D:\\TestDir\\text\\test\\s.txt");
-
+        srcFiles.add("D:\\TestDir\\Shlak\\Новий текстовий документ (2).txt");
         FileOutputStream fos = new FileOutputStream("D:\\TestDir\\text\\multiCompressed111.zip");
         ZipOutputStream zipOut = new ZipOutputStream(fos);
-        System.out.println(srcFiles);
         for (String srcFile : srcFiles) {
             File fileToZip = new File(srcFile);
             FileInputStream fis = new FileInputStream(fileToZip);
             ZipEntry zipEntry = new ZipEntry(fileToZip.getName());
             zipOut.putNextEntry(zipEntry);
-
             byte[] bytes = new byte[1024];
             int length;
             while ((length = fis.read(bytes)) >= 0) {
