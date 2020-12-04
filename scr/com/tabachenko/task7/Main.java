@@ -7,6 +7,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InvalidObjectException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class Main {
 
@@ -18,15 +21,23 @@ public class Main {
         String json = GSON.toJson(ifT);
         IFfromJson iFfromJson = new IFfromJson();
 
-        System.out.println(iFfromJson.serializetion(json));
+       // System.out.println(iFfromJson.serializetion(json));
+        KV kv = new KV("asd","dasd");
 
-       /* InfoTask infoTask= null;
+
+        ArrayList<KV> arrayList = new ArrayList<>();
+        arrayList.add(kv);
+        Task7 task7 = new Task7("sdf","sdf",151,"dsf","sdf","sdfdf","sdf",1,arrayList,"df");
+
+
+        //System.out.println((task7).toString());
+
+        String in= null;
         try {
-            infoTask = iFfromJson.deserializatior();
+            in = iFfromJson.deserializatior();
         } catch (InvalidObjectException e) {
             e.printStackTrace();
         }
-        System.out.println(infoTask.getLastUpdate());*/
-
+        //System.out.println(in);
     }
 }

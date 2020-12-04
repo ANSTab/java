@@ -32,16 +32,16 @@ public class IFfromJson {
         return flag;
     }
 
-    public InfoTask deserializatior() throws InvalidObjectException {
+    public String deserializatior() throws InvalidObjectException {
         File file = new File("D:\\java\\jSonFile.json");
-        //File file = new File("D:\\java\\responce.json");
+       // File file = new File("D:\\java\\responce.json");
         ObjectInputStream ois = null;
 
         try {
             FileInputStream fis = new FileInputStream(file);
             if (fis != null) {
                 ois = new ObjectInputStream(fis);
-                InfoTask InfoTask = (InfoTask) ois.readObject();
+                String InfoTask = (String) ois.readObject();
                 return InfoTask;
             }
         } catch (FileNotFoundException e) {
