@@ -1,28 +1,24 @@
-package com.tabachenko.task6;
-
+package com.tabachenko.task7;
 import java.io.*;
 
-public class Serializetor {
-
-
-    public boolean serializetion(JsonConstructor jsonConstructor) {
-
-
+public class IFfromJson {
+    public boolean serializetion(String infoTask) {
         boolean flag = false;
-        File file = new File("D:\\java\\jSonTest.json");
+        File file = new File("D:\\java\\jSonFile.json");
         ObjectOutputStream oos = null;
-
         try {
             FileOutputStream fos = new FileOutputStream(file);
 
             if (fos != null) {
                 oos = new ObjectOutputStream(fos);
-                oos.writeObject(jsonConstructor);
+                oos.writeObject(infoTask);
                 flag = true;
             }
-        } catch (FileNotFoundException e) {
+        } catch (
+                FileNotFoundException e) {
             e.printStackTrace();
-        } catch (IOException e) {
+        } catch (
+                IOException e) {
             e.printStackTrace();
         } finally {
             if (oos != null) {
@@ -36,16 +32,17 @@ public class Serializetor {
         return flag;
     }
 
-    public JsonConstructor deserializatior() throws InvalidObjectException {
-        File file = new File("D:\\java\\jSonTest.json");
+    public InfoTask deserializatior() throws InvalidObjectException {
+        File file = new File("D:\\java\\jSonFile.json");
+        //File file = new File("D:\\java\\responce.json");
         ObjectInputStream ois = null;
 
         try {
             FileInputStream fis = new FileInputStream(file);
             if (fis != null) {
                 ois = new ObjectInputStream(fis);
-                JsonConstructor jsonConstructor = (JsonConstructor) ois.readObject();
-                return jsonConstructor;
+                InfoTask InfoTask = (InfoTask) ois.readObject();
+                return InfoTask;
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -59,8 +56,10 @@ public class Serializetor {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }throw new InvalidObjectException(" Object fail");
+        }
+        throw new InvalidObjectException(" Object fail");
 
     }
 
-    }
+}
+
