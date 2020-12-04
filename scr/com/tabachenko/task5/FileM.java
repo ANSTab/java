@@ -18,18 +18,17 @@ public class FileM {
         Path path = null;
         List<String> stringList = Arrays.asList(foz.list());
 
-       /* for (String s : stringList) {
+       /*  for (String s : stringList) {
             String pathToS = String.valueOf(Paths.get(s).toAbsolutePath());
-            strings.add(pathToS);
-        }
-        System.out.println(strings);*/
+            strings.add(pathToS);*/
+        System.out.println(strings);
 
-        FileOutputStream fos = new FileOutputStream("D:\\TestDir\\АрхивБля.zip");
+        FileOutputStream fos = new FileOutputStream("D:\\TestDir\\arhive.zip");
         ZipOutputStream zipOutputStream = new ZipOutputStream(fos);
         for (String asd : stringList) {
-            File fileToZip = new File(asd);
+            File fileToZip = new File("D:\\TestDir\\pictures\\" + asd);
 
-            System.out.println( fileToZip.getAbsolutePath());
+            System.out.println(fileToZip.getAbsolutePath());
             FileInputStream fis = new FileInputStream(fileToZip);
             ZipEntry zipEntry = new ZipEntry(fileToZip.getName());
             zipOutputStream.putNextEntry(zipEntry);
