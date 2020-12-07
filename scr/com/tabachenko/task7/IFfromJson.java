@@ -1,5 +1,8 @@
 package com.tabachenko.task7;
+
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class IFfromJson {
     public boolean serializetion(String infoTask) {
@@ -32,33 +35,48 @@ public class IFfromJson {
         return flag;
     }
 
-    public String deserializatior() throws InvalidObjectException {
+    public StringBuilder deserializatior() throws InvalidObjectException {
         File file = new File("D:\\java\\jSonFile.json");
-       // File file = new File("D:\\java\\responce.json");
+        //File file = new File("D:\\java\\responce.json");
         ObjectInputStream ois = null;
-
+        String InfoTask = null;
+        StringBuilder stringBuilder = new StringBuilder();
+        List <String> list = new ArrayList<>();
         try {
             FileInputStream fis = new FileInputStream(file);
             if (fis != null) {
-                ois = new ObjectInputStream(fis);
-                String InfoTask = (String) ois.readObject();
-                return InfoTask;
+                int b = 0;
+                while ((b = fis.read()) != -1) {
+                    // ois = new ObjectInputStream(fis);
+                    // String InfoTask = (String) ois.readObject();
+
+                    InfoTask = Character.toString(b);
+                    list.add(Character.toString(b));
+
+                    stringBuilder.append(InfoTask);
+                    //System.out.println(stringBuilder);
+                    //System.out.print(InfoTask);
+                    //System.out.print((char)b);
+                }
+
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (NullPointerException e) {
             e.printStackTrace();
-        } finally {
-            try {
+        }
+        /*finally {
+          /*  try {
                 ois.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
-        throw new InvalidObjectException(" Object fail");
-
+        }*/
+        //  throw new InvalidObjectException(" Object fail");
+        //System.out.println(InfoTask);
+        return stringBuilder;
     }
 
 }

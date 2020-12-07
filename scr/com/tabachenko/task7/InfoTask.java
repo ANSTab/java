@@ -80,7 +80,7 @@ public class InfoTask implements Serializable {
 
     @Override
     public String toString() {
-        return "InfoTask{" +
+        return "{" +
                 "orgId='" + orgId + '\'' +
                 ", name='" + name + '\'' +
                 ", lastUpdate=" + lastUpdate +

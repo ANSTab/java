@@ -6,8 +6,20 @@ import java.security.KeyException;
 import java.security.PublicKey;
 import java.util.List;
 
-public class Task7 implements Serializable {
-    public Task7(String orgId, String name, long lastUpdate, String userGroupId, String userId, String description, String version, int documentVersion, List<KV> tags, String _id) {
+public class TaskWork implements Serializable {
+    private String orgId;
+    private String name;
+    private long lastUpdate;
+    private String userGroupId;
+    private String userId;
+    private String description;
+    private String version;
+    private int documentVersion;
+    private List<KV> tags;
+    private String _id;
+
+
+    public TaskWork(String orgId, String name, long lastUpdate, String userGroupId, String userId, String description, String version, int documentVersion, List<KV> tags, String _id) {
         this.orgId = orgId;
         this.name = name;
         this.lastUpdate = lastUpdate;
@@ -102,7 +114,7 @@ public class Task7 implements Serializable {
 
     @Override
     public String toString() {
-        return "Task7{" +
+        return "{" +
                 "orgId='" + orgId + '\'' +
                 ", name='" + name + '\'' +
                 ", lastUpdate=" + lastUpdate +
@@ -116,16 +128,39 @@ public class Task7 implements Serializable {
                 '}';
     }
 
-    private String orgId;
-    private String name;
-    private long lastUpdate;
-    private String userGroupId;
-    private String userId;
-    private String description;
-    private String version;
-    private int documentVersion;
-    private List<com.tabachenko.task7.KV> tags;
-    private String _id;
+    public class KV {
+
+        private String key;
+        private String value;
+
+        public KV(String key, String value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public String getKey() {
+            return key;
+        }
+
+        public void setKey(String key) {
+            this.key = key;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        public void setValue(String value) {
+            this.value = value;
+        }
+        @Override
+        public String toString() {
+            return "KV{" +
+                    "key='" + key + '\'' +
+                    ", value='" + value + '\'' +
+                    '}';
+        }
+    }
 
 
 }
