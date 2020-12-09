@@ -1,10 +1,6 @@
 package com.tabachenko.task7;
 
-import javax.xml.crypto.dsig.keyinfo.KeyValue;
 import java.io.Serializable;
-import java.security.KeyException;
-import java.security.PublicKey;
-import java.util.List;
 
 public class TaskWork implements Serializable {
     private String orgId;
@@ -15,11 +11,11 @@ public class TaskWork implements Serializable {
     private String description;
     private String version;
     private int documentVersion;
-    private List<KV> tags;
+    private KV [] tags;
     private String _id;
 
 
-    public TaskWork(String orgId, String name, long lastUpdate, String userGroupId, String userId, String description, String version, int documentVersion, List<KV> tags, String _id) {
+    public TaskWork(String orgId, String name, long lastUpdate, String userGroupId, String userId, String description, String version, int documentVersion, KV[] tags, String _id) {
         this.orgId = orgId;
         this.name = name;
         this.lastUpdate = lastUpdate;
@@ -49,11 +45,11 @@ public class TaskWork implements Serializable {
     }
 
     public long getLastUpdate() {
-        return lastUpdate;
+        return Long.valueOf(this.lastUpdate);
     }
 
     public void setLastUpdate(long lastUpdate) {
-        this.lastUpdate = lastUpdate;
+        this.lastUpdate = Long.valueOf(this.lastUpdate);
     }
 
     public String getUserGroupId() {
@@ -89,18 +85,18 @@ public class TaskWork implements Serializable {
     }
 
     public int getDocumentVersion() {
-        return documentVersion;
+        return   Integer.valueOf(this.documentVersion);
     }
 
     public void setDocumentVersion(int documentVersion) {
-        this.documentVersion = documentVersion;
+        this.documentVersion = Integer.valueOf(this.documentVersion);
     }
 
-    public List<KV> getTags() {
+    public KV[] getTags() {
         return tags;
     }
 
-    public void setTags(List<KV> tags) {
+    public void setTags(KV[] tags) {
         this.tags = tags;
     }
 

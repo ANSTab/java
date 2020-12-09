@@ -11,7 +11,6 @@ public class work {
         try (FileOutputStream fos = new FileOutputStream(file)) {
             fos.write(s.getBytes());
             fos.close();
-
         }catch (IOException e){
             e.printStackTrace();
 
@@ -23,9 +22,6 @@ public class work {
          System.out.print((char)b);
 
      }
-
-
-
         }catch (FileNotFoundException e){
             e.printStackTrace();
         }

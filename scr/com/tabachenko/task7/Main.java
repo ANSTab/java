@@ -1,14 +1,14 @@
 package com.tabachenko.task7;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.github.lbovolini.mapper.ObjectMapper;
+import com.google.gson.*;
+import com.google.gson.stream.JsonReader;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.InvalidObjectException;
+import java.io.*;
 import java.lang.reflect.Array;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -22,7 +22,6 @@ public class Main {
         InfoTask ifT = new InfoTask("BMCOPS", "CIS - Windows Server 2012 R2 MS", 15680394, "IDMService", "IDMServiceUser", "This Policy is created based on the recommended settings defined by Microsoft Windows Server 2012 R2 Security Configuration Benchmark Version 2.2.0, published on April 28th, 2016\nReference#:\nhttp://cisecurity.org", "1.0", 1);
         // String json = GSON.toJson(ifT);
         IFfromJson iFfromJson = new IFfromJson();
-
 
        /* KV kv = new KV("provider", "Server");
         KV kv1 = new KV("selectionHint", "Windows_2012_R2_MS");
@@ -43,12 +42,14 @@ public class Main {
         // String json = GSON.toJson(workingTask);
         // System.out.println(iFfromJson.serializetion(json));
         String s = String.valueOf(iFfromJson.deserializatior());
+        //  TaskWork  taskWork = GSON.fromJson(s,TaskWork.class);
 
-        TaskWork taskWork = GSON.fromJson(s,TaskWork.class);
-        GSON.
 
-       // workingTask.add(taskWork);
-        //System.out.println(taskWork.get_id());
+        TaskWork [] taskWorks =GSON.fromJson(s, TaskWork [].class);
+       for (TaskWork t: taskWorks){
+
+           System.out.println(t.getLastUpdate());
+       }
 
 
 

@@ -1,5 +1,8 @@
 package com.tabachenko.task7;
 
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonObject;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,8 +39,8 @@ public class IFfromJson {
     }
 
     public StringBuilder deserializatior() throws InvalidObjectException {
-        File file = new File("D:\\java\\jSonFile.json");
-        //File file = new File("D:\\java\\responce.json");
+      //  File file = new File("D:\\java\\jSonFile.json");
+       File file = new File("D:\\java\\responce.json");
         ObjectInputStream ois = null;
         String InfoTask = null;
         StringBuilder stringBuilder = new StringBuilder();
@@ -49,10 +52,7 @@ public class IFfromJson {
                 while ((b = fis.read()) != -1) {
                     // ois = new ObjectInputStream(fis);
                     // String InfoTask = (String) ois.readObject();
-
                     InfoTask = Character.toString(b);
-                    list.add(Character.toString(b));
-
                     stringBuilder.append(InfoTask);
                     //System.out.println(stringBuilder);
                     //System.out.print(InfoTask);
@@ -78,6 +78,5 @@ public class IFfromJson {
         //System.out.println(InfoTask);
         return stringBuilder;
     }
-
 }
 
