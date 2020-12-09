@@ -11,7 +11,7 @@ public class TaskWork implements Serializable {
     private String description;
     private String version;
     private int documentVersion;
-    private KV [] tags;
+    private KV[] tags;
     private String _id;
 
 
@@ -85,7 +85,7 @@ public class TaskWork implements Serializable {
     }
 
     public int getDocumentVersion() {
-        return   Integer.valueOf(this.documentVersion);
+        return Integer.valueOf(this.documentVersion);
     }
 
     public void setDocumentVersion(int documentVersion) {
@@ -124,7 +124,7 @@ public class TaskWork implements Serializable {
                 '}';
     }
 
-    public class KV {
+    public static class KV {
 
         private String key;
         private String value;
@@ -149,6 +149,7 @@ public class TaskWork implements Serializable {
         public void setValue(String value) {
             this.value = value;
         }
+
         @Override
         public String toString() {
             return "KV{" +
