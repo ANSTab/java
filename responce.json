@@ -1,0 +1,921 @@
+[
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS - Windows Server 2012 R2 MS",
+        "lastUpdate": 1568039413958,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended settings defined by Microsoft Windows Server 2012 R2 Security Configuration Benchmark Version 2.2.0, published on April 28th, 2016\nReference#:\nhttp://cisecurity.org",
+        "version": "1.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Server"
+            },
+            {
+                "key": "selectionHint",
+                "value": "Windows_2012_R2_MS"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Microsoft Windows Server 2012 R2 Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_-_Windows_Server_2012_R2_MS"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "GDPR Amazon Web Services Benchmark",
+        "lastUpdate": 1568039414157,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended settings defined by The General Data Protection Regulation (EU) 2016/679.",
+        "version": "1.0.0",
+        "documentVersion": "717",
+        "tags": [
+            {
+                "key": "provider",
+                "value": "AWS"
+            },
+            {
+                "key": "vendor",
+                "value": "GDPR"
+            },
+            {
+                "key": "benchmark",
+                "value": "General Data Protection Regulation (EU) 2016/679"
+            }
+        ],
+        "_id": "BMCOPS_GDPR_Amazon_Web_Services_Benchmark"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "Kubernetes CVE-2018-1002105 CVE",
+        "lastUpdate": 1568039414158,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "Kubernetes CVE-2018-1002105 CVEs",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Kubernetes"
+            },
+            {
+                "key": "selectionHint",
+                "value": "level1-linuxhostOS , openshift"
+            }
+        ],
+        "_id": "BMCOPS_Kubernetes_CVE-2018-1002105_CVE"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "BMC OpenShift Benchmark - Worker",
+        "lastUpdate": 1568039413562,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended OpenShift worker settings defined by CIS Kubernetes Benchmark and OpenSCAP Security Guide",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "OpenShift"
+            },
+            {
+                "key": "selectionHint",
+                "value": "openshift"
+            },
+            {
+                "key": "vendor",
+                "value": "BMC"
+            },
+            {
+                "key": "benchmark",
+                "value": "BMC OpenShift Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_BMC_OpenShift_Benchmark_-_Worker"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS - Windows Server 2012 R2 DC",
+        "lastUpdate": 1568039413861,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended settings defined by Microsoft Windows Server 2012 R2 Security Configuration Benchmark Version 2.2.0, published on April 28th, 2016\nReference#:\nhttp://cisecurity.org\n",
+        "version": "1.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Server"
+            },
+            {
+                "key": "selectionHint",
+                "value": "Windows_2012_R2_DC"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Microsoft Windows Server 2012 R2 Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_-_Windows_Server_2012_R2_DC"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS - Windows Server 2012 R2 MS for chef",
+        "lastUpdate": 1568039413956,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended settings defined by Microsoft Windows Server 2012 R2 Security Configuration Benchmark Version 2.2.0, published on April 28th, 2016\nReference#:\nhttp://cisecurity.org",
+        "version": "1.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Server"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Microsoft Windows Server 2012 R2 Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_-_Windows_Server_2012_R2_MS_for_chef"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Google Cloud Platform Foundation Benchmark - GKE",
+        "lastUpdate": 1568039414057,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy specifically covers recommendations addressing Google Kubernetes Engine (GKE) on Google Cloud Platform.\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "GCP"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Google Cloud Platform Foundation Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Google_Cloud_Platform_Foundation_Benchmark_-_GKE"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Google Cloud Platform Foundation Benchmark - Network",
+        "lastUpdate": 1568039414059,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy specifically covers recommendations around networking on Google Cloud Platform.\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "GCP"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Google Cloud Platform Foundation Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Google_Cloud_Platform_Foundation_Benchmark_-_Network"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Google Cloud Platform Foundation Benchmark - Projects",
+        "lastUpdate": 1568039414064,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy specifically covers recommendations around projects on Google Cloud Platform.\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "GCP"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Google Cloud Platform Foundation Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Google_Cloud_Platform_Foundation_Benchmark_-_Projects"
+    },
+   {
+        "orgId": "BMCOPS",
+        "name": "CIS Google Cloud Platform Foundation Benchmark - Sinks",
+        "lastUpdate": 1568039414072,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy specifically covers recommendations around Sink on Google Cloud Platform.\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "GCP"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Google Cloud Platform Foundation Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Google_Cloud_Platform_Foundation_Benchmark_-_Sinks"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "PCI DSS Amazon Web Services Benchmark",
+        "lastUpdate": 1568039414158,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended settings defined by Payment Card Industry Data Security Standard 3.2.1",
+        "version": "1.0.0",
+        "documentVersion": "717",
+        "tags": [
+            {
+                "key": "provider",
+                "value": "AWS"
+            },
+            {
+                "key": "vendor",
+                "value": "PCI DSS"
+            },
+            {
+                "key": "benchmark",
+                "value": "Payment Card Industry Data Security Standard 3.2.1"
+            }
+        ],
+        "_id": "BMCOPS_PCI_DSS_Amazon_Web_Services_Benchmark"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "BMC AWS S3 Bucket",
+        "lastUpdate": 1568039413560,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "BMC recommended policy to check AWS S3 bucket is not publicly accessible",
+        "version": "1.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "AWS"
+            },
+            {
+                "key": "selectionHint",
+                "value": "S3_BUCKETS"
+            },
+            {
+                "key": "vendor",
+                "value": "BMC"
+            },
+            {
+                "key": "benchmark",
+                "value": "BMC AWS Best Practices"
+            }
+        ],
+        "_id": "BMCOPS_BMC_AWS_S3_Bucket"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS - Windows Server 2008 MS",
+        "lastUpdate": 1568039413662,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This template is created based on the recommended settings defined by Microsoft Windows Server 2008 Security Configuration Benchmark Version 2.1.0, published on December 3rd, 2013.",
+        "version": "1.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Server"
+            },
+            {
+                "key": "selectionHint",
+                "value": "BSA"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Microsoft Windows Server 2008 Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_-_Windows_Server_2008_MS"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS - Windows Server 2008 R2 DC",
+        "lastUpdate": 1568039413665,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended settings defined by Microsoft Windows Server 2008 R2 Security Configuration Benchmark Version 3.0.0, published on April 28th, 2016\nReference#:\nhttp://cisecurity.org\n",
+        "version": "1.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Server"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Microsoft Windows Server 2008 R2 Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_-_Windows_Server_2008_R2_DC"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS - Windows Server 2008 R2 MS",
+        "lastUpdate": 1568039413858,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended settings defined by Microsoft Windows Server 2008 R2 Security Configuration Benchmark Version 3.0.0, published on April 28th, 2016\nReference#:\nhttp://cisecurity.org\n",
+        "version": "1.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Server"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Microsoft Windows Server 2008 R2 Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_-_Windows_Server_2008_R2_MS"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Docker 1.12.0 Benchmark",
+        "lastUpdate": 1568039413964,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy is created based on the recommended settings defined by CIS Docker 1.12.0 Benchmark Version 1.0.0, published on September 15th, 2016\n\nReference:\nhttp://cisecurity.org\n",
+        "version": "1.0.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Docker"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Docker 1.12.0 Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Docker_1.12.0_Benchmark"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Google Cloud Platform Foundation Benchmark - IAM",
+        "lastUpdate": 1568039414058,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy specifically covers recommendations around IAM on Google Cloud Platform.\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "GCP"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Google Cloud Platform Foundation Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Google_Cloud_Platform_Foundation_Benchmark_-_IAM"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Google Cloud Platform Foundation Benchmark - SQL",
+        "lastUpdate": 1568039414065,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy specifically covers recommendations around Cloud SQL Database Services on Google Cloud Platform.\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "GCP"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Google Cloud Platform Foundation Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Google_Cloud_Platform_Foundation_Benchmark_-_SQL"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Google Cloud Platform Foundation Benchmark - Service Accounts",
+        "lastUpdate": 1568039414071,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy specifically covers recommendations around Service Account on Google Cloud Platform.\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "GCP"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Google Cloud Platform Foundation Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Google_Cloud_Platform_Foundation_Benchmark_-_Service_Accounts"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "BMC AWS ElasticSearch",
+        "lastUpdate": 1568039413559,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "BMC recommended policy to check AWS Elastic Search domain does not have open access",
+        "version": "1.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "AWS"
+            },
+            {
+                "key": "selectionHint",
+                "value": "ES_DOMAINS"
+            },
+            {
+                "key": "vendor",
+                "value": "BMC"
+            },
+            {
+               "key": "benchmark",
+                "value": "BMC AWS Best Practices"
+            }
+        ],
+        "_id": "BMCOPS_BMC_AWS_ElasticSearch"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "BMC OpenShift Benchmark - Master",
+        "lastUpdate": 1568039413561,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended OpenShift Master settings defined by CIS Kubernetes Benchmark and OpenSCAP Security Guide",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "OpenShift"
+            },
+            {
+                "key": "selectionHint",
+                "value": "openshift"
+            },
+            {
+                "key": "vendor",
+                "value": "BMC"
+            },
+            {
+                "key": "benchmark",
+                "value": "BMC OpenShift Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_BMC_OpenShift_Benchmark_-_Master"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS - Red Hat Enterprise Linux 6",
+        "lastUpdate": 1568039413656,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended settings defined by Red Hat Enterprise Security Configuration Benchmark Settings for Linux 6 Version 2.0.2, published on June 02, 2016\nReference#:\nhttp://cisecurity.org",
+        "version": "1.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Server"
+            },
+            {
+                "key": "selectionHint",
+                "value": "CIS_RHEL_6"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Red Hat Enterprise Linux 6 Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_-_Red_Hat_Enterprise_Linux_6"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Docker 1.13.0 Benchmark",
+        "lastUpdate": 1568039413967,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy is created based on the recommended Docker settings defined by CIS Docker 1.13.0 Benchmark Version 1.0.0, published on January 19th, 2017\n\nReference:\nhttp://cisecurity.org\n",
+        "version": "1.0.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Docker"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Docker 1.13.0 Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Docker_1.13.0_Benchmark"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Google Cloud Platform Foundation Benchmark - DNS",
+        "lastUpdate": 1568039414057,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy specifically covers recommendations around networking DNS on Google Cloud Platform.\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "GCP"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Google Cloud Platform Foundation Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Google_Cloud_Platform_Foundation_Benchmark_-_DNS"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Google Cloud Platform Foundation Benchmark - VM",
+        "lastUpdate": 1568039414073,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy specifically recommendations around Virtual Machines on Google Cloud Platform.\nReference:\nhttps://workbench.cisecurity.org/benchmarks/429\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "GCP"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Google Cloud Platform Foundation Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Google_Cloud_Platform_Foundation_Benchmark_-_VM"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Kubernetes Benchmark - Master",
+        "lastUpdate": 1568039414073,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended kubernetes master settings defined by CIS Kubernetes Benchmark 1.2.0 \n\nReference:\nhttp://cisecurity.org\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Kubernetes"
+            },
+            {
+                "key": "selectionHint",
+                "value": "level1-linuxhostOS"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Kubernetes Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Kubernetes_Benchmark_-_Master"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Kubernetes Benchmark - Worker",
+        "lastUpdate": 1568039414082,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended kubernetes worker settings defined by CIS Kubernetes Benchmark 1.2.0 \n\nReference:\nhttp://cisecurity.org\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Kubernetes"
+            },
+            {
+                "key": "selectionHint",
+                "value": "level1-linuxhostOS"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Kubernetes Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Kubernetes_Benchmark_-_Worker"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "AWS CFN CaaS Portal",
+        "lastUpdate": 1568039413557,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "AWS policy for validating CAAS portal",
+        "version": "1.0",
+       "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "AWS"
+            },
+            {
+                "key": "selectionHint",
+                "value": "CFN_PORTAL"
+            },
+            {
+                "key": "vendor",
+                "value": "BMC"
+            },
+            {
+                "key": "benchmark",
+                "value": "BMC AWS Best Practices"
+            }
+        ],
+        "_id": "BMCOPS_AWS_CFN_CaaS_Portal"
+   },
+    {
+        "orgId": "BMCOPS",
+        "name": "App Vulcanizer Policy",
+        "lastUpdate": 1568039413558,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy finds lists all the applications and their CVEs if present.",
+        "version": "1.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "OWASP"
+            },
+            {
+                "key": "selectionHint",
+                "value": "DepChecker"
+            }
+        ],
+        "_id": "BMCOPS_App_Vulcanizer_Policy"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "BMC AWS RDS",
+        "lastUpdate": 1568039413560,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "BMC recommended policy to check RDS database instance is not publically accessible and is enabled for data encryption and backup",
+        "version": "1.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "AWS"
+            },
+            {
+                "key": "selectionHint",
+                "value": "RDS_DB_INSTANCES"
+            },
+            {
+                "key": "vendor",
+                "value": "BMC"
+            },
+            {
+                "key": "benchmark",
+                "value": "BMC AWS Best Practices"
+            }
+        ],
+        "_id": "BMCOPS_BMC_AWS_RDS"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Amazon Web Services Foundations Benchmark",
+        "lastUpdate": 1568039413962,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended settings defined by CIS Amazon Web Services Foundations Version 1.2.0, published on 23 May 2018\n\nReference:\nhttp://cisecurity.org\n",
+        "version": "1.0.0",
+        "documentVersion": "717",
+        "tags": [
+            {
+                "key": "provider",
+                "value": "AWS"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Amazon Web Services Foundations Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Amazon_Web_Services_Foundations_Benchmark"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Amazon Web Services Three-tier Web Architecture Benchmark",
+        "lastUpdate": 1568039413963,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended settings defined by CIS Amazon Web Services Three-tier Web Architecture v1.0.0, publihed on 29 nov 2016.",
+        "version": "1.0.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "AWS"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Amazon Web Services Three-tier Web Architecture Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Amazon_Web_Services_Three-tier_Web_Architecture_Benchmark"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Google Cloud Platform Foundation Benchmark - KMS",
+        "lastUpdate": 1568039414058,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy specifically covers KMS recommendations settings on Google Cloud Platform.\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "GCP"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Google Cloud Platform Foundation Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Google_Cloud_Platform_Foundation_Benchmark_-_KMS"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Google Cloud Platform Foundation Benchmark - Storage",
+        "lastUpdate": 1568039414072,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This policy specifically covers overs recommendations around log buckets and Storage\nReference:\nhttp://cisecurity.org\n",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "GCP"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Google Cloud Platform Foundation Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Google_Cloud_Platform_Foundation_Benchmark_-_Storage"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "CIS Microsoft Azure Foundations Benchmark",
+        "lastUpdate": 1568039414083,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "This Policy is created based on the recommended settings defined by CIS Microsoft Azure Foundations Benchmark v1.0.0,   published on 20 feb 2018.",
+        "version": "1.0.0",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Microsoft Azure"
+            },
+            {
+                "key": "vendor",
+                "value": "CIS"
+            },
+            {
+                "key": "benchmark",
+                "value": "CIS Microsoft Azure Foundations Benchmark"
+            }
+        ],
+        "_id": "BMCOPS_CIS_Microsoft_Azure_Foundations_Benchmark"
+    },
+    {
+        "orgId": "BMCOPS",
+        "name": "Docker CVE-2019-5736",
+        "lastUpdate": 1568039414156,
+        "userGroupId": "IDMService",
+        "userId": "IDMServiceUser",
+        "description": "Docker CVE-2019-5736 CVEs",
+        "documentVersion": 1,
+        "tags": [
+            {
+                "key": "provider",
+                "value": "Docker"
+            },
+            {
+                "key": "selectionHint",
+                "value": "custom-config"
+            }
+        ],
+        "_id": "BMCOPS_Docker_CVE-2019-5736"
+    }
+]

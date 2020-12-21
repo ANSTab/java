@@ -1,0 +1,29 @@
+  {
+    "orgId": "BMCOPS",
+    "name": "CIS - Windows Server 2012 R2 MS",
+    "lastUpdate": 15680394,
+    "userGroupId": "IDMService",
+    "userId": "IDMServiceUser",
+    "description": "This Policy is created based on the recommended settings defined by Microsoft Windows Server 2012 R2 Security Configuration Benchmark Version 2.2.0, published on April 28th, 2016\nReference#:\nhttp://cisecurity.org",
+    "version": "1.0",
+    "documentVersion": 1,
+    "tags": [
+      {
+        "key": "provider",
+        "value": "Server"
+      },
+      {
+        "key": "selectionHint",
+        "value": "Windows_2012_R2_MS"
+      },
+      {
+        "key": "vendor",
+        "value": "CIS"
+      },
+      {
+        "key": "benchmark",
+        "value": "CIS Microsoft Windows Server 2012 R2 Benchmark"
+      }
+    ],
+    "_id": "BMCOPS_CIS_-_Windows_Server_2012_R2_MS"
+  }
