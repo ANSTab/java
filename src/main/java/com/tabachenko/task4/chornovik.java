@@ -1,9 +1,5 @@
 package com.tabachenko.task4;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
-
 public class chornovik {
    /* public static void main(String[] args) {
         List<String> stringList = new ArrayList<>();

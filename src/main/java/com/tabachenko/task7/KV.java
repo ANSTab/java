@@ -1,4 +1,4 @@
-/*package com.tabachenko.task7;
+/*package com.com.tabachenko.task7;
 
 public class KV {
 

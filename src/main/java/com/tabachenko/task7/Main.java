@@ -1,6 +1,9 @@
 package com.tabachenko.task7;
-import com.google.gson.*;
-import java.io.*;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.io.InvalidObjectException;
 public class Main {
 
     final static Gson GSON = new GsonBuilder().setPrettyPrinting().create();
