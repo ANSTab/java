@@ -13,6 +13,9 @@ public class CountryInfo {
         this.cityCount = cityCount;
     }
 
+    public CountryInfo() {
+    }
+
     public String getCountryName() {
         return countryName;
     }

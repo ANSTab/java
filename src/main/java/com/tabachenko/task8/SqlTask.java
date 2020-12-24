@@ -3,7 +3,8 @@ package com.tabachenko.task8;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class SqlTask {
+public class SqlTask extends CountryInfo{
+
     Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/mybase", "ANSTab", "Alex17101988");
     Statement statement = connection.createStatement();
 
@@ -19,10 +20,10 @@ public class SqlTask {
         while (resultSet.next()) {
             CountryInfo countryInfo = new CountryInfo(resultSet.getString(1), resultSet.getInt(2), resultSet.getInt(3));
             cou.add(countryInfo);
+
         }
         return cou;
     }
-
     public void DatabaseWithoutMysql () throws SQLException {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("select country.name as 'назва країни',count(DISTINCT  region.name) as 'кількість регіонів'  , count(city.name) as 'кількість міст'\n" +
@@ -37,7 +38,4 @@ public class SqlTask {
             System.out.printf("%27s%30s%36s", resultSet.getString(1) + " ",resultSet.getInt(2) + " ",resultSet.getInt(3) + " "+"\n");
         }
     }
-
-
-
 }

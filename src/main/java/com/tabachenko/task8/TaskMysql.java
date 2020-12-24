@@ -1,9 +1,5 @@
 package com.tabachenko.task8;
 
-import com.mysql.cj.x.protobuf.MysqlxCrud;
-import com.mysql.cj.xdevapi.Collection;
-
-import java.awt.*;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,6 +9,10 @@ public class TaskMysql {
 
         SqlTask sqlTask = new SqlTask();
         //System.out.println(sqlTask.SqlGetListObj());
-        sqlTask.DatabaseWithoutMysql();
+        //sqlTask.DatabaseWithoutMysql();
+        ArrayList<CountryInfo> arrayList = sqlTask.SqlGetListObj();
+        for (CountryInfo co : arrayList) {
+            System.out.println("Країни: " + co.getCountryName() + "," + " Кількість регіонів:  " + co.getRegionCount() + "," + " Кількість міст:  " + co.getCityCount());
+        }
     }
 }
