@@ -13,8 +13,8 @@ public class LauncherSqlBase {
         String cityName = "Sofiy";
 
         SqlTask sqlTask = new SqlTask();
-        //sqlTask.DatabaseWithoutMysql();
-        sqlTask.DatabaseUpd(idCountru, coutnryName, idRegion, regionName, cityName);
+        sqlTask.DatabaseWithoutMysql();
+        //sqlTask.DatabaseUpd(idCountru, coutnryName, idRegion, regionName, cityName);
         //System.out.println(sqlTask.SqlGetListObj());
 
 
@@ -22,6 +22,6 @@ public class LauncherSqlBase {
         for (CountryInfo co : arrayList) {
             System.out.println("Країни: " + co.getCountryName() + "," + " Кількість регіонів:  " + co.getRegionCount() + "," + " Кількість міст:  " + co.getCityCount());
         }*/
-        sqlTask.allBase();
+        //sqlTask.allBase();
     }
 }
