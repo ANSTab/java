@@ -5,10 +5,18 @@
       <list>
         <option value="$PROJECT_DIR$/../untitled/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../addres-book-test/pom.xml" />
+        <option value="$PROJECT_DIR$/../TaskTesting/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../addres-book-test/addres-book/pom.xml" />
+        <option value="$PROJECT_DIR$/TaskTesting/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" project-jdk-name="14" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" default="false" project-jdk-name="14" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

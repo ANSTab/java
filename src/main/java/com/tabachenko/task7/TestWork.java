@@ -1,3 +1,4 @@
+/*
 package com.tabachenko.task7;
 
 import com.google.gson.Gson;
@@ -36,6 +37,7 @@ public class TestWork {
         }
         KV [] kvs = GSON.fromJson(s,KV [].class);
         for (KV kv: kvs){
+            System.out.println(kv.getKey());
             System.out.println(kv.getValue());
         }
 
@@ -59,3 +61,4 @@ public class TestWork {
         }
     }
 }
+*/

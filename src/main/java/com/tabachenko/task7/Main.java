@@ -17,6 +17,7 @@ public class Main {
         for (TaskWork t : taskWorks) {
             System.out.println(t.getName());
             System.out.println(t.getLastUpdate());
+            System.out.println(t.getDocumentVersion());
         }
     }
 }
