@@ -15,7 +15,7 @@ public class testDriver {
         webDriver.get("https://ru.wikipedia.org/wiki");
         String title = webDriver.getTitle();
         Assert.assertTrue(title.contains("Википедия"));
-        webDriver.quit();
+        //webDriver.quit();
     }
 }
 
