@@ -18,13 +18,12 @@ public class LauncherTest {
         spamTestPageObj.enterPass("Alex88910171");
         spamTestPageObj.clickLoginPage();
 
-        for (int i = 0; i <= 4; i++) {
+        for (int i = 0; i <= 2; i++) {
             spamTestPageObj.createMess();
             spamTestPageObj.putEmail("ast.tovlnz@gmail.com");
             spamTestPageObj.putTextInMessege("working good");
             spamTestPageObj.sendMessege();
         }
         spamTestPageObj.quitEmail();
-
     }
 }
