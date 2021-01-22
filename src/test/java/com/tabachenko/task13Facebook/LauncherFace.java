@@ -1,6 +1,7 @@
 package com.tabachenko.task13Facebook;
 
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -9,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class LauncherFace {
 
     @Test
-    public void FacebookBot() {
+    public void FacebookBot() throws InterruptedException {
 
         ChromeOptions ops = new ChromeOptions();
         ops.addArguments("--disable-notifications");
@@ -25,11 +26,9 @@ public class LauncherFace {
         facebookBot.clickMessege();
         //facebookBot.foundProfile("Владимир Градиленко");
         facebookBot.foundProfile("Виктор Перепичаенко");
-
-        //facebookBot.writeMessege("Привіт");
-        //facebookBot.sendMessege();
-        System.out.println(facebookBot.fpundMess());
-
-
+        facebookBot.sizeMes();
+        facebookBot.writeMessege("Sorry");
+        facebookBot.sendMessege();
+        //facebookBot.foundMess();
     }
 }
