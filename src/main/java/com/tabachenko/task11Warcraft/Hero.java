@@ -15,7 +15,4 @@ public abstract class Hero {
         this.helth = helth;
     }
 
-
-
-
 }

@@ -1,4 +1,5 @@
 package com.tabachenko.task11Warcraft;
+
 import com.tabachenko.task11Warcraft.Aliki.Elfu.Archer;
 import com.tabachenko.task11Warcraft.Aliki.Elfu.Warior;
 import com.tabachenko.task11Warcraft.Aliki.People.Magician;
@@ -11,6 +12,7 @@ import com.tabachenko.task11Warcraft.Orda.Orku.Shaman;
 import com.tabachenko.task11Warcraft.Orda.Zonbi.AndedArcher;
 import com.tabachenko.task11Warcraft.Orda.Zonbi.DemonLok;
 import com.tabachenko.task11Warcraft.Orda.Zonbi.ZombiWar;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,27 +22,26 @@ public class LauncherBattle {
         Hero archerElf = new Archer();
         Hero warElf = new Warior();
         Hero mageHuman = new Magician();
-        Hero PalHuman = new Paladin();
+        Hero palHuman = new Paladin();
         Hero crossHuman = new Сrossbowman();
-
-        List<Hero> partyAlikow = new ArrayList();
-        partyAlikow.add(mageElf);
-        partyAlikow.add(archerElf);
-        partyAlikow.add(warElf);
-        partyAlikow.add(mageHuman);
-        partyAlikow.add(PalHuman);
-        partyAlikow.add(crossHuman);
-
-        System.out.println(partyAlikow);
-
 
         Hero hanterOrk = new Hanter();
         Hero shamanOrk = new Shaman();
         Hero goblin = new Goblin();
         Hero arcerZombi = new AndedArcher();
-        Hero warAnded= new ZombiWar();
+        Hero warAnded = new ZombiWar();
         Hero lok = new DemonLok();
 
-    }
 
+        SuperMetods superMetods = new SuperMetods();
+      //  System.out.println(superMetods.battleHordeWithAllianceOneOnOne(goblin, mageElf));
+
+        System.out.println(superMetods.createPartyAlliance());
+        System.out.println();
+        System.out.println(superMetods.createPartyHorde());
+
+
+
+
+    }
 }
