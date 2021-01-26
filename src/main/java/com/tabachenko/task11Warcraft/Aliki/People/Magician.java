@@ -3,8 +3,17 @@ import com.tabachenko.task11Warcraft.Aliki.Human;
 import com.tabachenko.task11Warcraft.Hero;
 
 public class Magician extends Human {
-    private int attack = 4;
-    private int hil = 10;
+    private int attack = 10;
+    private int hil = 5;
+
+    @Override
+    public String toString() {
+        return "Magician{" +
+                "attack=" + attack +
+                ", hil=" + hil +
+                '}';
+    }
+
     public int getAttack() {
         return attack;
     }

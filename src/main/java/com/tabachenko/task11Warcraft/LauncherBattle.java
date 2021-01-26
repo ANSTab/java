@@ -32,16 +32,9 @@ public class LauncherBattle {
         Hero warAnded = new ZombiWar();
         Hero lok = new DemonLok();
 
-
         SuperMetods superMetods = new SuperMetods();
-      //  System.out.println(superMetods.battleHordeWithAllianceOneOnOne(goblin, mageElf));
-
-        System.out.println(superMetods.createPartyAlliance());
-        System.out.println();
-        System.out.println(superMetods.createPartyHorde());
-
-
-
+        //  System.out.println(superMetods.battleHordeWithAllianceOneOnOne(goblin, mageElf));
+        superMetods.battleHordeOnAllianceParty(superMetods.createPartyHorde(), superMetods.createPartyAlliance());
 
     }
 }

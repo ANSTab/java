@@ -7,6 +7,13 @@ public class Warior extends Elf {
     private int attack = 15;
 
     @Override
+    public String toString() {
+        return "Warior{" +
+                "attack=" + attack +
+                '}';
+    }
+
+    @Override
     public int getHelth() {
         return helth;
     }

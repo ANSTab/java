@@ -6,8 +6,17 @@ import com.tabachenko.task11Warcraft.Hero;
 import com.tabachenko.task11Warcraft.Orda.Horde;
 
 public class Archer extends Elf {
+
     private int attack = 3;
     private int superAttack = 7;
+
+    @Override
+    public String toString() {
+        return "Archer{" +
+                "attack=" + attack +
+                ", superAttack=" + superAttack +
+                '}';
+    }
 
     public int getAttack() {
         return attack;

@@ -7,6 +7,14 @@ public class Hanter extends Ork {
     private int attack = 2;
     private int superAttack = 3;
 
+    @Override
+    public String toString() {
+        return "Hanter{" +
+                "attack=" + attack +
+                ", superAttack=" + superAttack +
+                '}';
+    }
+
     public int getAttack() {
         return attack;
     }

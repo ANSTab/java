@@ -6,6 +6,14 @@ import com.tabachenko.task11Warcraft.Hero;
 public class Paladin extends Human {
 
     private int attack = 18;
+
+    @Override
+    public String toString() {
+        return "Paladin{" +
+                "attack=" + attack +
+                '}';
+    }
+
     public int getAttack() {
         return attack;
     }

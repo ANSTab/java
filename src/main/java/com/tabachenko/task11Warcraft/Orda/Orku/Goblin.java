@@ -6,6 +6,13 @@ import com.tabachenko.task11Warcraft.Orda.Ork;
 public class Goblin extends Ork {
     private int attack = 20;
 
+    @Override
+    public String toString() {
+        return "Goblin{" +
+                "attack=" + attack +
+                '}';
+    }
+
     public int getAttack() {
         return attack;
     }

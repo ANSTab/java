@@ -7,7 +7,16 @@ import com.tabachenko.task11Warcraft.Orda.Horde;
 public class Mage extends Elf {
 
     private int attack = 10;
-    private int hil = 10;
+    private int hil = 5;
+
+    @Override
+    public String toString() {
+        return "Mage{" +
+                "attack=" + attack +
+                ", hil=" + hil +
+                '}';
+    }
+
     public int getAttack() {
         return attack;
     }

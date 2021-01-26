@@ -18,6 +18,15 @@ public class AndedArcher extends Anded {
     public void setSuperAttack(int superAttack) {
         this.superAttack = superAttack;
     }
+
+    @Override
+    public String toString() {
+        return "AndedArcher{" +
+                "attack=" + attack +
+                ", superAttack=" + superAttack +
+                '}';
+    }
+
     private int attack = 2;
     private int superAttack = 4;
 

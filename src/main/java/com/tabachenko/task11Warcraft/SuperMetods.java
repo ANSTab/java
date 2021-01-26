@@ -16,39 +16,52 @@ import com.tabachenko.task11Warcraft.Orda.Zonbi.ZombiWar;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class SuperMetods {
     Hero mageElf = new Mage();
     Hero archerElf = new Archer();
+    Hero archerElf1 = new Archer();
     Hero warElf = new Warior();
+    Hero warElf1 = new Warior();
     Hero mageHuman = new Magician();
     Hero palHuman = new Paladin();
+    Hero palHuman1 = new Paladin();
     Hero crossHuman = new Сrossbowman();
-//________________________________________
+    //________________________________________
     Hero hanterOrk = new Hanter();
+    Hero hanterOrk111 = new Hanter();
     Hero shamanOrk = new Shaman();
     Hero goblin = new Goblin();
+    Hero goblin12 = new Goblin();
     Hero arcerZombi = new AndedArcher();
     Hero warAnded = new ZombiWar();
+    Hero warAnded1 = new ZombiWar();
     Hero lok = new DemonLok();
 
     public Hero battleHordeWithAllianceOneOnOne(Hero horde, Hero alik) {
-
+        System.out.println(horde);
+        System.out.println(alik);
+        System.out.println("================================");
         Hero winner = null;
-        for (int i = 0; i <= 20; i++) {
+        for (int i = 0; i <= 200; i++) {
             if (horde.helth != 0 || alik.helth != 0) {
                 horde.fight(alik);
                 System.out.println("ХП алика: " + alik.helth);
                 if (alik.helth <= 0) {
                     System.out.println("Winner Horde !!!!!");
+                    winner = horde;
+                    System.out.println("Переможець бою: "+winner);
                     break;
                 }
                 alik.fight(horde);
                 System.out.println("ХП урки: " + horde.helth);
                 if (horde.helth <= 0) {
                     System.out.println("Winner  Alliance !!!!");
+                    winner = alik;
+                    System.out.println("Переможець бою: "+winner);
                     break;
                 }
-                if (String.valueOf(horde.getClass()).contains("Shaman")||String.valueOf(horde.getClass()).contains("DemonLok")) {
+                if (String.valueOf(horde.getClass()).contains("Shaman") || String.valueOf(horde.getClass()).contains("DemonLok")) {
                     horde.betterAttack(horde);
                     System.out.println("ХП урки: " + horde.helth);
                 } else {
@@ -56,10 +69,12 @@ public class SuperMetods {
                     System.out.println("ХП алика: " + alik.helth);
                     if (alik.helth <= 0) {
                         System.out.println("Winner Horde !!!!!");
+                        winner = horde;
+                        System.out.println("Переможець бою: "+winner);
                         break;
                     }
                 }
-                if (String.valueOf(alik.getClass()).contains("Mage")||String.valueOf(alik.getClass()).contains("Magician")) {
+                if (String.valueOf(alik.getClass()).contains("Mage") || String.valueOf(alik.getClass()).contains("Magician")) {
                     alik.betterAttack(alik);
                     System.out.println("ХП алика: " + alik.helth);
                 } else {
@@ -67,48 +82,73 @@ public class SuperMetods {
                     System.out.println("ХП урки: " + horde.helth);
                     if (horde.helth <= 0) {
                         System.out.println("Winner Alliance !!!!!");
+                        winner = alik;
+                        System.out.println("Переможець бою: "+ winner);
                         break;
                     }
                 }
-            }if (horde.helth <= 0){
-            winner = alik;
-        }else winner = horde;
+            }
         }
-        return winner;
+
+        return winner ;
     }
-    public List <Hero> createPartyHorde () {
-        List <Hero> hordeParty = new ArrayList<>();
+    public List<Hero> createPartyHorde() {
+        List<Hero> hordeParty = new ArrayList<>();
+        hordeParty.add(warAnded1);
         hordeParty.add(warAnded);
-        hordeParty.add(warAnded);
-        hordeParty.add(goblin);
+        hordeParty.add(goblin12);
         hordeParty.add(goblin);
         hordeParty.add(arcerZombi);
-        hordeParty.add(hanterOrk);
+        hordeParty.add(hanterOrk111);
         hordeParty.add(hanterOrk);
         hordeParty.add(lok);
-     return  hordeParty  ;
+        return hordeParty;
     }
-    public List <Hero> createPartyAlliance (){
-        List <Hero> allianceParty = new ArrayList<>();
+    public List<Hero> createPartyAlliance() {
+        List<Hero> allianceParty = new ArrayList<>();
         allianceParty.add(palHuman);
-        allianceParty.add(palHuman);
+        allianceParty.add(palHuman1);
         allianceParty.add(warElf);
-        allianceParty.add(warElf);
+        allianceParty.add(warElf1);
         allianceParty.add(crossHuman);
-        allianceParty.add(crossHuman);
+        allianceParty.add(archerElf1);
         allianceParty.add(archerElf);
         allianceParty.add(mageElf);
         return allianceParty;
     }
-
-
-
-public  List <Hero> battleHordeOnAllianceParty (List<Hero> hordeParty,List<Hero> allianceParty ){
-
-
-
-
-        return hordeParty;
-}
-
+    public void battleHordeOnAllianceParty(List<Hero> hordeParty, List<Hero> allianceParty) {
+        int randomOrda = 0 + (int) (Math.random() * 8);
+        int randomAlik = 0 + (int) (Math.random() * 8);
+        List <Hero> heroes;
+        if (hordeParty.size()<=allianceParty.size()){
+            heroes = hordeParty;
+        }else {
+            heroes=allianceParty;
+        }
+        for ( int i = 0; i<=heroes.size(); i++) {
+            SuperMetods superMetods = new SuperMetods();
+            String newWinner = String.valueOf(superMetods.battleHordeWithAllianceOneOnOne(hordeParty.get(randomOrda), allianceParty.get(randomAlik)).getClass());
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++");
+            if (newWinner.contains("Orda")) {
+                allianceParty.remove(randomOrda);
+                for (Hero h : hordeParty) {
+                    if (hordeParty.get(randomOrda) == h){
+                        h.setHelth(hordeParty.get(randomOrda).helth);
+                    }
+                    System.out.println(h +" " + h.helth);
+                }
+                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            }
+            if (newWinner.contains("Aliki")) {
+                hordeParty.remove(randomAlik);
+                for (Hero a : allianceParty) {
+                    if (allianceParty.get(randomAlik) == a){
+                        a.setHelth(allianceParty.get(randomAlik).helth);
+                    }
+                    System.out.println(a + " " + a.helth);
+                }
+                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            }
+        }
+    }
 }

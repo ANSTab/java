@@ -7,6 +7,13 @@ import com.tabachenko.task11Warcraft.Orda.Anded;
 public class ZombiWar extends Anded {
     private int attack = 15;
 
+    @Override
+    public String toString() {
+        return "ZombiWar{" +
+                "attack=" + attack +
+                '}';
+    }
+
     public int getAttack() {
         return attack;
     }

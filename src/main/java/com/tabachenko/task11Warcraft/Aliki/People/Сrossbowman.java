@@ -8,6 +8,14 @@ public class Сrossbowman extends Human {
     private int attack = 3;
     private int superAttack = 5;
 
+    @Override
+    public String toString() {
+        return "Сrossbowman{" +
+                "attack=" + attack +
+                ", superAttack=" + superAttack +
+                '}';
+    }
+
     public int getAttack() {
         return attack;
     }

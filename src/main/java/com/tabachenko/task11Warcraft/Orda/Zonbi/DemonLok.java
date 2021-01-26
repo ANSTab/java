@@ -7,8 +7,16 @@ import com.tabachenko.task11Warcraft.Orda.Horde;
 
 public class DemonLok extends Anded {
 
-    private int attack = 5;
-    private int hil = 10;
+    private int attack = 10;
+    private int hil = 5;
+
+    @Override
+    public String toString() {
+        return "DemonLok{" +
+                "attack=" + attack +
+                ", hil=" + hil +
+                '}';
+    }
 
     public int getAttack() {
         return attack;
