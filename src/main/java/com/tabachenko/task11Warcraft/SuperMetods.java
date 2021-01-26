@@ -50,7 +50,7 @@ public class SuperMetods {
                 if (alik.helth <= 0) {
                     System.out.println("Winner Horde !!!!!");
                     winner = horde;
-                    System.out.println("Переможець бою: "+winner);
+                    System.out.println("Переможець бою: " + winner);
                     break;
                 }
                 alik.fight(horde);
@@ -58,7 +58,7 @@ public class SuperMetods {
                 if (horde.helth <= 0) {
                     System.out.println("Winner  Alliance !!!!");
                     winner = alik;
-                    System.out.println("Переможець бою: "+winner);
+                    System.out.println("Переможець бою: " + winner);
                     break;
                 }
                 if (String.valueOf(horde.getClass()).contains("Shaman") || String.valueOf(horde.getClass()).contains("DemonLok")) {
@@ -70,7 +70,7 @@ public class SuperMetods {
                     if (alik.helth <= 0) {
                         System.out.println("Winner Horde !!!!!");
                         winner = horde;
-                        System.out.println("Переможець бою: "+winner);
+                        System.out.println("Переможець бою: " + winner);
                         break;
                     }
                 }
@@ -83,15 +83,15 @@ public class SuperMetods {
                     if (horde.helth <= 0) {
                         System.out.println("Winner Alliance !!!!!");
                         winner = alik;
-                        System.out.println("Переможець бою: "+ winner);
+                        System.out.println("Переможець бою: " + winner);
                         break;
                     }
                 }
             }
         }
-
-        return winner ;
+        return winner;
     }
+
     public List<Hero> createPartyHorde() {
         List<Hero> hordeParty = new ArrayList<>();
         hordeParty.add(warAnded1);
@@ -104,6 +104,7 @@ public class SuperMetods {
         hordeParty.add(lok);
         return hordeParty;
     }
+
     public List<Hero> createPartyAlliance() {
         List<Hero> allianceParty = new ArrayList<>();
         allianceParty.add(palHuman);
@@ -116,38 +117,47 @@ public class SuperMetods {
         allianceParty.add(mageElf);
         return allianceParty;
     }
+
     public void battleHordeOnAllianceParty(List<Hero> hordeParty, List<Hero> allianceParty) {
-        int randomOrda = 0 + (int) (Math.random() * 8);
-        int randomAlik = 0 + (int) (Math.random() * 8);
-        List <Hero> heroes;
-        if (hordeParty.size()<=allianceParty.size()){
-            heroes = hordeParty;
-        }else {
-            heroes=allianceParty;
-        }
-        for ( int i = 0; i<=heroes.size(); i++) {
+        int i = 1;
+        while (hordeParty.size() != 0 || allianceParty.size() != 0) {
+            System.out.println("Битва № " + i);
             SuperMetods superMetods = new SuperMetods();
+            int randomOrda = 0 + (int) (Math.random() * hordeParty.size());
+            int randomAlik = 0 + (int) (Math.random() * allianceParty.size());
             String newWinner = String.valueOf(superMetods.battleHordeWithAllianceOneOnOne(hordeParty.get(randomOrda), allianceParty.get(randomAlik)).getClass());
             System.out.println("+++++++++++++++++++++++++++++++++++++++++");
             if (newWinner.contains("Orda")) {
-                allianceParty.remove(randomOrda);
+                allianceParty.remove(randomAlik);
+                i++;
                 for (Hero h : hordeParty) {
-                    if (hordeParty.get(randomOrda) == h){
+                    if (hordeParty.get(randomOrda) == h) {
                         h.setHelth(hordeParty.get(randomOrda).helth);
                     }
-                    System.out.println(h +" " + h.helth);
+                    System.out.println(h + " " + h.helth);
                 }
                 System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                for (Hero a : allianceParty) {
+                    System.out.println(a + " " + a.helth);
+                }
             }
             if (newWinner.contains("Aliki")) {
-                hordeParty.remove(randomAlik);
+                hordeParty.remove(randomOrda);
+                i++;
                 for (Hero a : allianceParty) {
-                    if (allianceParty.get(randomAlik) == a){
+                    if (allianceParty.get(randomAlik) == a) {
                         a.setHelth(allianceParty.get(randomAlik).helth);
                     }
                     System.out.println(a + " " + a.helth);
                 }
                 System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                for (Hero h : hordeParty) {
+                    System.out.println(h + " " + h.helth);
+                }
+            }
+            if (hordeParty.size() == 0 || allianceParty.size() == 0) {
+                System.out.println("Битва закінчилась");
+                break;
             }
         }
     }
