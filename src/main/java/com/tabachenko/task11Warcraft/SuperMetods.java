@@ -12,12 +12,19 @@ import com.tabachenko.task11Warcraft.Orda.Orku.Shaman;
 import com.tabachenko.task11Warcraft.Orda.Zonbi.AndedArcher;
 import com.tabachenko.task11Warcraft.Orda.Zonbi.DemonLok;
 import com.tabachenko.task11Warcraft.Orda.Zonbi.ZombiWar;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class SuperMetods {
+
+
+    private static final Logger logger = Logger.getLogger(SuperMetods.class);
+
+
     Hero mageElf = new Mage();
     Hero archerElf = new Archer();
     Hero archerElf1 = new Archer();
@@ -37,11 +44,9 @@ public class SuperMetods {
     Hero warAnded = new ZombiWar();
     Hero warAnded1 = new ZombiWar();
     Hero lok = new DemonLok();
-
     public Hero battleHordeWithAllianceOneOnOne(Hero horde, Hero alik) {
-        System.out.println(horde);
-        System.out.println(alik);
-        System.out.println("================================");
+        System.out.println("В битві приймаються участь: " + horde);
+        System.out.println("В битві приймаються участь: " + alik);
         Hero winner = null;
         for (int i = 0; i <= 200; i++) {
             if (horde.helth != 0 || alik.helth != 0) {
@@ -121,22 +126,24 @@ public class SuperMetods {
     public void battleHordeOnAllianceParty(List<Hero> hordeParty, List<Hero> allianceParty) {
         int i = 1;
         while (hordeParty.size() != 0 || allianceParty.size() != 0) {
-            System.out.println("Битва № " + i);
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!   БІЙ № " + i + "   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             SuperMetods superMetods = new SuperMetods();
             int randomOrda = 0 + (int) (Math.random() * hordeParty.size());
             int randomAlik = 0 + (int) (Math.random() * allianceParty.size());
             String newWinner = String.valueOf(superMetods.battleHordeWithAllianceOneOnOne(hordeParty.get(randomOrda), allianceParty.get(randomAlik)).getClass());
+           // logger.info("пройшов бій");
             System.out.println("+++++++++++++++++++++++++++++++++++++++++");
             if (newWinner.contains("Orda")) {
                 allianceParty.remove(randomAlik);
                 i++;
+                System.out.println("========== КОМАНДА ОРДИ =========");
                 for (Hero h : hordeParty) {
                     if (hordeParty.get(randomOrda) == h) {
                         h.setHelth(hordeParty.get(randomOrda).helth);
                     }
                     System.out.println(h + " " + h.helth);
                 }
-                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                System.out.println("========== КОМАНДА АЛЬЯНСУ =========");
                 for (Hero a : allianceParty) {
                     System.out.println(a + " " + a.helth);
                 }
@@ -144,19 +151,25 @@ public class SuperMetods {
             if (newWinner.contains("Aliki")) {
                 hordeParty.remove(randomOrda);
                 i++;
+                System.out.println("========== КОМАНДА АЛЬЯНСУ =========");
                 for (Hero a : allianceParty) {
                     if (allianceParty.get(randomAlik) == a) {
                         a.setHelth(allianceParty.get(randomAlik).helth);
                     }
                     System.out.println(a + " " + a.helth);
                 }
-                System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                System.out.println("========== КОМАНДА ОРДИ =========");
                 for (Hero h : hordeParty) {
                     System.out.println(h + " " + h.helth);
                 }
             }
             if (hordeParty.size() == 0 || allianceParty.size() == 0) {
-                System.out.println("Битва закінчилась");
+                System.out.println("ВІЙНА ЗАКІНЧИЛАСЬ");
+                if (hordeParty.size() == 0) {
+                    System.out.println("ПЕРЕМОЖЕЦЬ ВІЙНИ АЛЬЯНС");
+                } else if (allianceParty.size() == 0) {
+                    System.out.println("ПЕРЕМОЖЕЦЬ ВІЙНИ ОРДА");
+                }
                 break;
             }
         }

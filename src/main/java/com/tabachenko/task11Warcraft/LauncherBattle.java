@@ -12,19 +12,24 @@ import com.tabachenko.task11Warcraft.Orda.Orku.Shaman;
 import com.tabachenko.task11Warcraft.Orda.Zonbi.AndedArcher;
 import com.tabachenko.task11Warcraft.Orda.Zonbi.DemonLok;
 import com.tabachenko.task11Warcraft.Orda.Zonbi.ZombiWar;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.Log4jEntityResolver;
 
 public class LauncherBattle {
+
+    private static SuperMetods superMetods;
+
     public static void main(String[] args) {
+
+        // АЛЬЯНС
         Hero mageElf = new Mage();
         Hero archerElf = new Archer();
         Hero warElf = new Warior();
         Hero mageHuman = new Magician();
         Hero palHuman = new Paladin();
         Hero crossHuman = new Сrossbowman();
-
+//================================================
+        // ОРДА
         Hero hanterOrk = new Hanter();
         Hero shamanOrk = new Shaman();
         Hero goblin = new Goblin();
@@ -32,7 +37,8 @@ public class LauncherBattle {
         Hero warAnded = new ZombiWar();
         Hero lok = new DemonLok();
 
-        SuperMetods superMetods = new SuperMetods();
+        superMetods = new SuperMetods();
+
         //  System.out.println(superMetods.battleHordeWithAllianceOneOnOne(goblin, mageElf));
         superMetods.battleHordeOnAllianceParty(superMetods.createPartyHorde(), superMetods.createPartyAlliance());
 

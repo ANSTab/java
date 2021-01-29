@@ -1,4 +1,5 @@
 package com.tabachenko.task11Warcraft.Orda.Orku;
+
 import com.tabachenko.task11Warcraft.Hero;
 import com.tabachenko.task11Warcraft.Orda.Ork;
 
@@ -18,15 +19,19 @@ public class Hanter extends Ork {
     public int getAttack() {
         return attack;
     }
+
     public void setAttack(int attack) {
         this.attack = attack;
     }
+
     public int getSuperAttack() {
         return superAttack;
     }
+
     public void setSuperAttack(int superAttack) {
         this.superAttack = superAttack;
     }
+
     @Override
     public Hero fight(Hero hero) {
         hero.setHelth(hero.helth - attack);

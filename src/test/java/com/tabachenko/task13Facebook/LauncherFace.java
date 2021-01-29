@@ -20,8 +20,8 @@ public class LauncherFace {
         driver.manage().window().maximize();
         FacebookBot facebookBot = new FacebookBot(driver);
         facebookBot.openFacebook();
-        facebookBot.putLoginFacebook("+380674725958");
-        facebookBot.putPassFacebook("88910171");
+        facebookBot.putLoginFacebook("");
+        facebookBot.putPassFacebook("");
         facebookBot.clickInFacebook();
         facebookBot.clickMessege();
         //facebookBot.foundProfile("Владимир Градиленко");

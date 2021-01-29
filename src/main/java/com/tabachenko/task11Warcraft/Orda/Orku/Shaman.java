@@ -1,4 +1,5 @@
 package com.tabachenko.task11Warcraft.Orda.Orku;
+
 import com.tabachenko.task11Warcraft.Hero;
 import com.tabachenko.task11Warcraft.Orda.Ork;
 
@@ -18,12 +19,15 @@ public class Shaman extends Ork {
     public int getAttack() {
         return attack;
     }
+
     public void setAttack(int attack) {
         this.attack = attack;
     }
+
     public int getHil() {
         return hil;
     }
+
     public void setHil(int hil) {
         this.hil = hil;
     }

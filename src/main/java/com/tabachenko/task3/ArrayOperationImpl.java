@@ -2,7 +2,13 @@ package com.tabachenko.task3;
 
 class ArrayOperationImpl implements IArrayOperation {
      boolean pravda = false;
-     public boolean equals(int[] a, int[] b) { // МЕТОД ПЕРЕВІРКА
+
+    @Override
+    public int test(int a, int b) {
+        return 0;
+    }
+
+    public boolean equals(int[] a, int[] b) { // МЕТОД ПЕРЕВІРКА
 
          boolean pravda = false;
          int counter = 0; // лічильник

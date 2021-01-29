@@ -17,16 +17,20 @@ public class Warior extends Elf {
     public int getHelth() {
         return helth;
     }
+
     @Override
     public void setHelth(int helth) {
         this.helth = helth;
     }
+
     public int getAttack() {
         return attack;
     }
+
     public void setAttack(int attack) {
         this.attack = attack;
     }
+
     @Override
     public Hero fight(Hero hero) {
         hero.setHelth(hero.helth - attack);

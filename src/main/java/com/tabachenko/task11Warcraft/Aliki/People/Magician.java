@@ -1,4 +1,5 @@
 package com.tabachenko.task11Warcraft.Aliki.People;
+
 import com.tabachenko.task11Warcraft.Aliki.Human;
 import com.tabachenko.task11Warcraft.Hero;
 
@@ -29,6 +30,7 @@ public class Magician extends Human {
     public void setHil(int hil) {
         this.hil = hil;
     }
+
     @Override
     public Hero fight(Hero hero) {
         hero.setHelth(hero.helth - attack);

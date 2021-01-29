@@ -1,7 +1,7 @@
 package com.tabachenko.task11Warcraft.Aliki.People;
+
 import com.tabachenko.task11Warcraft.Aliki.Human;
 import com.tabachenko.task11Warcraft.Hero;
-
 
 public class Paladin extends Human {
 
@@ -17,6 +17,7 @@ public class Paladin extends Human {
     public int getAttack() {
         return attack;
     }
+
     public void setAttack(int attack) {
         this.attack = attack;
     }
@@ -26,6 +27,7 @@ public class Paladin extends Human {
         hero.setHelth(hero.helth - attack);
         return hero;
     }
+
     @Override
     public Hero betterAttack(Hero hero) {
         hero.setHelth(hero.helth - attack);

@@ -1,12 +1,9 @@
 package com.tabachenko.task11Warcraft.Aliki.Elfu;
 
-import com.tabachenko.task11Warcraft.Aliki.Alliance;
 import com.tabachenko.task11Warcraft.Aliki.Elf;
 import com.tabachenko.task11Warcraft.Hero;
-import com.tabachenko.task11Warcraft.Orda.Horde;
 
 public class Archer extends Elf {
-
     private int attack = 3;
     private int superAttack = 7;
 
@@ -45,6 +42,4 @@ public class Archer extends Elf {
         hero.setHelth(hero.helth - superAttack);
         return hero;
     }
-
-
 }

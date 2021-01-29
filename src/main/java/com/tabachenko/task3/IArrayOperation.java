@@ -1,6 +1,9 @@
 package com.tabachenko.task3;
 
 public interface IArrayOperation {
+
+    public int test(int a, int b);
+
     //Два множества А и В равны (А=В), если они состоят из одних и тех же элементов
     public boolean equals(int[] a, int[] b);
 

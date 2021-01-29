@@ -1,9 +1,17 @@
 package com.tabachenko.task3;
 
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public  class Laucher {
     public static void main(String[] args) {
         int[] mass1 = {5, 8, 7};
-        int[] mass2 = {7, 5, 8};
+        int[] mass2 = {5, 8, 7};
+
+       // int[] mass2 = {7, 5, 8};
 
         int[] mass3 = {5, 8, 7};
         int[] mass4 = {5, 4, 6};
@@ -16,11 +24,15 @@ public  class Laucher {
 
         ArrayOperationImpl arrayOperation = new ArrayOperationImpl();
 
-        arrayOperation.printArraysequals(mass3,mass4);
+       /* arrayOperation.printArraysequals(mass3,mass4);
         arrayOperation.printArraysUnion(mass1,mass2);
         arrayOperation.printArraysSubtract(mass3,mass4);
         arrayOperation.printdeleteNull(mass5,mass6);
-        arrayOperation.printSymmetricSubtract(mass7,mass8);
+        arrayOperation.printSymmetricSubtract(mass7,mass8);*/
+//======================================================
+        ArrayOperationImplStream arrayOperationImplStream = new ArrayOperationImplStream();
+       // System.out.println(arrayOperationImplStream.equals(mass1,mass2));
+
 
     }
 }
